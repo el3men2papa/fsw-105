@@ -45,6 +45,7 @@ function final(a){
   if(a.length%2===0){
 var short = a.slice(0, a.length/2);
 
+
   }
 else {
 var firstHalf = a.slice(0, a.length/2);
