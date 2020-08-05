@@ -1,6 +1,15 @@
 let readlineSync = require('readline-sync');
 
-function add (){
+let userOptions = ["Put hand in hole", "Find the key", "Open the door"]
+
+let i = ["Put hand in hole", "Find the key", "Open the door"];
+while (i = "Put hand in hole") {
+	console.log(i);
+	i++;
+  		break;
+}
+
+function option1 (){
     let num1 = readlineSync.question("Please enter your first number? ");
     let num2 = readlineSync.question("Please enter your second number? "); 
     console.log("The result is" + " " + (Number(num1) + Number(num2)));
@@ -23,7 +32,7 @@ function divide(){
     
 }
 function results() {
-    let sum = readlineSync.question('enter the operation to perform: add, sub, mul, div:')
+    let sum = readlineSync.question('enter the operation to perform: , sub, mul, div:')
     if (sum === 'add'){
         add() 
     }else if (sum === 'sub'){
