@@ -1,39 +1,40 @@
 let readlineSync = require('readline-sync');
 
-function add (){
-    let num1 = readlineSync.question("Please enter your first number? ");
-    let num2 = readlineSync.question("Please enter your second number? "); 
-    console.log("The result is" + " " + (Number(num1) + Number(num2)));
-}
-function subtract(){
-    let num1 = readlineSync.question("Please enter your first number? ");
-    let num2 = readlineSync.question("Please enter your second number? "); 
-    console.log("The result is" + " " + (Number(num1) - Number(num2)))
-}
-function multiply(){
-    let num1 = readlineSync.question("Please enter your first number? ");
-    let num2 = readlineSync.question("Please enter your second number? "); 
-    console.log("The result is" + " " + (Number(num1) * Number(num2)));
-}
-function divide(){
-    let num1 = readlineSync.question("Please enter your first number? ");
-    let num2 = readlineSync.question("Please enter your second number? "); 
-    console.log("The result is" + " " + (Number(num1) / Number(num2)));
 
-    
-}
-function results() {
-    let sum = readlineSync.question('enter the operation to perform: add, sub, mul, div:')
-    if (sum === 'add'){
-        add() 
-    }else if (sum === 'sub'){
-        subtract()
-    }else if (sum === 'mul'){
-        multiply()
-    }else if (sum === 'div'){
-        divide()
-    }else {
-        console.log("Please try again")
+
+let escaped = false;
+let alive = true;
+let key = false;
+let optionOne = '1. Put hand in hole'
+let optionTwo = '2. Find the key'
+let optionThree = '3. Open the Door'
+let userQuestion = "What do you want to do?"
+while (!escaped && alive)
+{
+    let generalQuestions = readlineSync.question(userQuestion.concat(" ",optionOne," ", optionTwo, " ", optionThree))
+
+if (generalQuestions == "1") {
+    escaped = false
+    key = false
+    console.log ("You are dead, Try it again")
     }
+ else if (generalQuestions == "2") {
+      key = true
+      console.log("Great you have found the key")
+    
+  
+  } 
+
+  else if (generalQuestions == "3") {
+
+    if (key === true){
+        console.log("You have open the door")
+        escaped = true
+    }
+    else if (key === false){
+
+        console.log("You have to have a key to be able to open the door")
+    }
+
+} 
 }
-results()
