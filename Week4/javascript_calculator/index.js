@@ -1,13 +1,5 @@
 let readlineSync = require('readline-sync');
 
-let userOptions = ["Put hand in hole", "Find the key", "Open the door"]
-
-let i = ["Put hand in hole", "Find the key", "Open the door"];
-while (i = "Put hand in hole") {
-	console.log(i);
-	i++;
-  		break;
-}
 
 function option1 (){
     let num1 = readlineSync.question("Please enter your first number? ");
